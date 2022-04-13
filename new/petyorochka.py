@@ -4,7 +4,6 @@ product = [{"id":"1", "price": "50","name":"cola" },{"id":"2", "price": "40","na
 customers = [{"id": "1212", "name": "akmal", "prods": ["water"]}, {"id": "12121", "name": "roma","prods": ["cola"]}]
 g = input('Do you want to buy something? ')
 while g == 'Yes' or g == 'yes':
-    summ = 0
     prov = input("do you have an account? ")
     if prov == "yes" or prov == "Yes":
         prov_id = input('Enter your id: ')
@@ -15,6 +14,8 @@ while g == 'Yes' or g == 'yes':
                 new_prods= input("Choose a product: ")
                 x["prods"].append(new_prods)
                 print(customers)
+            elif prov_id != x["id"]:
+                print("error!!! Please enter correct id! ")
     elif prov == "No" or prov == "no":
         cust_new = {}
         cust_new["id"] = a
